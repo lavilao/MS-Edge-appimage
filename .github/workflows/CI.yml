@@ -48,4 +48,5 @@ jobs:
             draft: false
             files: |
               *.AppImage
+              *.AppImage.zsync
             repo_token: ${{ secrets.GITHUB_TOKEN }}

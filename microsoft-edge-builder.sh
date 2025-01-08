@@ -34,7 +34,7 @@ _create_edge_appimage(){
 	fi
 	tar xf ./control.tar.xz
 	VERSION=$(cat control | grep Version | cut -c 10-)
-	ARCH=x86_64 VERSION=$(./appimagetool -v | grep -o '[[:digit:]]*') ./appimagetool -s ./"$APP".AppDir
+	ARCH=x86_64 VERSION=$(./appimagetool -v | grep -o '[[:digit:]]*') ./appimagetool -u "gh-releases-zsync|lavilao|MS-Edge-appimage|continuous|Microsoft-Edge-$CHANNEL-*-x86_64.AppImage.zsync" -s ./"$APP".AppDir
 	mv ./*.AppImage ./Microsoft-Edge-"$CHANNEL"-"$VERSION"-x86_64.AppImage || exit 1
 }
 
